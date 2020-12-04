@@ -1,37 +1,50 @@
 # PyMarkdownDiaryHelper
 
-#### 介绍
+### 介绍
+
 创建每天的日记文件，并且可以将每月或每年的合并，并添加封面和目录。
 
-#### 软件架构
-软件架构说明
+### 生成的文件结构
 
+示例
 
-#### 安装教程
+2020年
+├── 1月
+├── 2月
+├── 3月
+├── 4月
+├── 5月
+├── 6月
+├── 7月
+├── 8月
+├── 9月
+├── 10月
+├── 11月
+└── 12月
+          ├── 1.md
+          ├── 2.md
+          └── 3.md
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+### 日记头信息
 
-#### 使用说明
+## xxxx年xx月x日	星期x
+> 天气	:	
+> 班休	:	
+> 时间	:	xx:xx
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+***
 
-#### 参与贡献
+### 版本
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+#### 0.1 
 
+功能:扫描并按照文件结构创建当天的日记文件，并添加一定的日记头信息。
 
-#### 特技
+### TODO:
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. 月日记封面模板
+2. 月日记整合
+3. 年日记封面模板
+4. 年日记整合
+5. 自动添加天气
+
