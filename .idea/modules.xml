@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PythonCode.iml" filepath="$PROJECT_DIR$/.idea/PythonCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/py-markdown-diary-helper.iml" filepath="$PROJECT_DIR$/.idea/py-markdown-diary-helper.iml" />
     </modules>
   </component>
 </project>
