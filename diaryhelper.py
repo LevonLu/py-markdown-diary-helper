@@ -18,7 +18,15 @@ def getTimeTitle():
 
 # 返回当日日记开头
 def getDiaryHead():
-    strHead = "> 天气\t:\t\n> 班休\t:\t\n> 时间\t:\t"+ str(getHour()) + ":" + str(getMinute()) + "\n\n\n\n***\n\n"
+    strHour = str(getHour())
+    if getHour() < 10:
+        strHour = "0" + strHour
+
+    strMinute = str(getMinute())
+    if getMinute() < 10:
+        strMinute = "0" + strMinute
+
+    strHead = "> 天气\t:\t\n> 班休\t:\t\n> 时间\t:\t"+ strHour + ":" + strMinute + "\n\n\n\n***\n\n"
     return strHead
 
 # 返回月汇总日记的封面
