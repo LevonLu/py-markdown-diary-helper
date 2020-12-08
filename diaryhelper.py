@@ -34,10 +34,17 @@ def getmonthcover(year = 0,month = 0):
     strCover = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<center><font size=30> " + str(year) + "." + str(month) + "</font></center>" + "\n<div STYLE=\"page-break-after: always;\"></div>\n"
     return strCover
 
+# 返回年汇总日记的封面
+def getyearcover(year = 0):
+    strCover = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<center><font size=60> " + str(year) + "</font></center>" + "\n<div STYLE=\"page-break-after: always;\"></div>\n"
+    return strCover
+
 # 合并文件夹 从2020年开始 遍历每一个文件夹
-def mergeMonthDiary():
+def MergeDiary():
     for tYear in range(2020, getYear() + 1):
         if (os.path.exists(str(tYear))):
+            this_year_diary = open(str(tYear) + ".md", "w+")
+            this_year_diary.write(getyearcover(tYear))
             for tMonth in range(1,13,1):
                 if(os.path.exists(str(tYear) + "/" + str(tMonth))):
                     file_num = sum([os.path.isfile(listx) for listx in os.listdir("./")])
@@ -51,6 +58,12 @@ def mergeMonthDiary():
                                 this_month_diary.write(str_day + "\n\n\n\n")
                                 file_day_diary.close()
                         this_month_diary.close()
+
+                        file_month_diary = open(str(tYear) + "/" + str(tMonth) + ".md", "r+", errors="ignore")
+                        str_month = file_month_diary.read()
+                        this_year_diary.write(str_month + "\n\n\n\n")
+                        file_month_diary.close()
+            this_year_diary.close()
 
 
 

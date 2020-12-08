@@ -18,4 +18,4 @@ if __name__ == '__main__':
         TodayDiary.write(getDiaryHead())
         TodayDiary.close()
 
-    #mergeMonthDiary()
+    MergeDiary()
