@@ -8,6 +8,9 @@ class LawDairy:
     diaryNumYear = 0
     diaryNumMonth = 0
 
+    # md编辑器
+    mdEditor = "notepad"
+
     # 指令处理
     def function(self, strinput=""):
         strcommand = strinput.split(" ", 1)
@@ -42,6 +45,13 @@ class LawDairy:
 
     # 初始化 读取日记文件夹 统计数量
     def init(self):
+        # 读取配置文件，配置md编辑器
+        strConfig = "ldary.config"
+        if os.path.isfile(strConfig):
+            config = open(strConfig, "r")
+            self.mdEditor = config.read()
+            config.close()
+        # 遍历文件夹统计数量
         for tYear in range(2020, getYear() + 1):
             if os.path.exists(str(tYear)):
                 for tMonth in range(1, 13, 1):
@@ -135,11 +145,10 @@ class LawDairy:
         print(viewmode)
 
     # 打开某天日记
-    @staticmethod
-    def open(date="today"):
+    def open(self, date="today"):
         stryear, strmonth, strday = dateprocess(date)
         strfilename = stryear + "/" + strmonth + "/" + strday + ".md"
-        os.system("typora " + strfilename)
+        os.system(self.mdEditor + " " + strfilename)
 
     # 帮助
     @staticmethod

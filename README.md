@@ -36,6 +36,50 @@
 
 ### 版本说明
 
+#### 0.51
+
+feature:
+    指定md编辑器，修改$ldary.config$即可，未指定时默认notepad
+
+#### 0.5(Fakemmandiary)
+
+​	版本代号：Fakemmandiary
+
+​	取自Fake Command Diary，该版本是伪命令行操作
+
+```
+指令可写全拼也可简写，指令与参数之间以空格隔开
+指令        简写  功能
+writenow    w   创建今天的日记文件并立即开始写作
+create      c   仅创建但不打开     create [date]
+merge       m   合并日记文件   
+delete      d   删除日记文件      delete [date]
+show        s   按日历视图显示     show [viewmode]
+open        o   打开日记文件      open [date]
+help        h   帮助
+exit        e   退出
+
+参数说明
+[date]  
+    默认 表示今天
+    yyyy.mm.dd : yyyy年mm月dd日
+    mm.dd      : 今年mm月dd日
+[viewmode]  
+    all 每个月
+    month 本月
+    year 本年按月显示
+```
+
+​	主文件由main.py改为ldary.py，main.py暂时保留。
+
+​	exe可运行程序由pyinstaller生成。
+
+​	1.日期会自动补全为两位 如2021/06/07 
+
+​	2.可以删除某天的日记 
+
+​	3.可以创建任意天的日记
+
 #### 0.25
 
 1. 增加了年度日记归档功能
@@ -52,7 +96,8 @@
 
 ### TODO:
 
-1. 自动添加天气
+1. 自定义封面
+2. 输出为PDF
 
 ### 开发计划
 
@@ -63,3 +108,7 @@
 |     月日记封面     | 2020.12.06 24:00 | 已完成 |
 |     年日记整合     | 2020.12.08 24:00 | 已完成 |
 |     年日记封面     | 2020.12.08 24:00 | 已完成 |
+|    指定md编辑器    |    2021.06.28    | 已完成 |
+|    自定义封面等    |    2021.07.15    | 待开发 |
+|    输出为PDF      |    2021.07.15    |  待开发 |
+|                    |                  |        |
